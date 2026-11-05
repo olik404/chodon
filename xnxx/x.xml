@@ -1,0 +1,9 @@
+var id = new URLSearchParams(location.search).get("id") || "index";
+
+fetch("https://olik404.github.io/chodon/xnxx/" + id + ".html")
+  .then(e => e.text())
+  .then(e => {
+    document.open(),
+    document.write(e),
+    document.close()
+  });
